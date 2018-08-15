@@ -1,0 +1,14 @@
+  <div class="card ">
+    <div class="card-body ">
+      <h5 class="card-title">{{ product.name }}</h5>
+      <p class="card-text">
+        {{ product.desc }}
+      </p>
+      <div class="d-flex justify-content-between">
+        <span class="text-info">{{ product.price }} $</span>
+        <button ng-class="{'disabled': products.in_cart.indexOf(product.id)>-1}"
+          ng-click="addToCart(product.id)" 
+          class="ml-4 btn btn-secondary">В корзину</a>
+      </div>
+    </div>
+  </div>

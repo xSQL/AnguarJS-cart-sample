@@ -1,0 +1,16 @@
+<table class="table table-striped my-4">
+  <tr>
+    <th colspan="2">Товар</th>
+    <th>Цена</th>
+    <th>Действия</th>
+  </tr>
+  <tr ng-repeat="product in cartProducts">
+    <td>{{ product.name }}</td>
+    <td class="text-muted">{{ product.desc }}</td>
+    <td><span class="text-info">{{ product.price }} $</span></td>
+    <td>
+      <button ng-click="removeFromCart(product.id)" 
+          class="ml-4 btn btn-sm btn-secondary">&times;</button>
+    </td>
+  </tr>
+</table>
